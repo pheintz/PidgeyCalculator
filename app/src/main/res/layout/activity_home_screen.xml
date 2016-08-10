@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="Pidgey Calculator"
+        android:id="@+id/PidgeyCalcButton"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:text="Pokedex"
+        android:background="@android:color/holo_orange_dark"
+        android:id="@+id/PokedexButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.13" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="Evolution Calculator"
+        android:id="@+id/EvoCalcButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.17" />
+</LinearLayout>

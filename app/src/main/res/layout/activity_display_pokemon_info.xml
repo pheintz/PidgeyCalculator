@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".DisplayPokemonInfo">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageView"
+        android:src="@drawable/poisontype"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/textView6"
+        android:layout_alignLeft="@+id/imageView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.045"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.079"
+            android:text="Pokemon Name"
+            android:id="@+id/PokemonHeader"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:id="@+id/WeightHeader"
+            android:layout_above="@+id/Type1"
+            android:layout_toEndOf="@+id/MainAttack2"
+            android:layout_weight="0.015"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:id="@+id/Weight"
+            android:layout_below="@+id/WeightHeader"
+            android:layout_alignStart="@+id/WeightHeader"
+            android:layout_weight="0.015"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max CP"
+            android:id="@+id/CPHeader"
+            android:layout_below="@+id/WeightHeader"
+            android:layout_weight="0.01"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="2000"
+            android:textSize="25dp"
+            android:id="@+id/MaxCP"
+            android:layout_below="@+id/Type1"
+            android:layout_alignStart="@+id/CPHeader"
+            android:layout_weight="0.04"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Primary Attacks"
+            android:id="@+id/PrimaryAttacks"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MaxCP"
+            android:layout_alignStart="@+id/MaxCP"
+            android:layout_weight="0.015"
+            android:layout_gravity="center" />
+
+        f<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Flamethrower (Fire)"
+            android:id="@+id/MainAttack1"
+            android:layout_below="@+id/PrimaryAttacks"
+            android:layout_alignStart="@+id/PrimaryAttacks"
+            android:layout_weight="0.01"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Main Attack2"
+            android:id="@+id/MainAttack2"
+            android:layout_below="@+id/MainAttack1"
+            android:layout_alignStart="@+id/MainAttack1"
+            android:layout_weight="0.1"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_toEndOf="@+id/textView6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.31"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evolution Req."
+            android:id="@+id/HeightHeader"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100candy"
+            android:id="@+id/CandyToEvo"
+            android:layout_alignTop="@+id/Weight"
+            android:layout_alignLeft="@+id/HeightHeader"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:id="@+id/TypeHeader"
+            android:layout_below="@+id/HeightHeader"
+            android:layout_toStartOf="@+id/PokemonHeader"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Electric"
+            android:textSize="24dp"
+            android:id="@+id/Type1"
+            android:layout_alignBottom="@+id/TypeHeader"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Electric"
+            android:textSize="24dp"
+            android:id="@+id/Type2"
+            android:layout_below="@+id/CPHeader"
+            android:layout_toStartOf="@+id/PokemonHeader"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Special Attacks"
+            android:id="@+id/textView5"
+            android:textSize="13dip"
+            android:layout_alignTop="@+id/PrimaryAttacks"
+            android:layout_alignEnd="@+id/Type1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Special1"
+            android:id="@+id/Special1"
+            android:layout_alignTop="@+id/MainAttack1"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Special2"
+            android:id="@+id/Special2"
+            android:layout_alignTop="@+id/MainAttack2"
+            android:layout_alignStart="@+id/Special1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Special 3"
+            android:id="@+id/Special3"
+            android:layout_below="@+id/Special2"
+            android:layout_alignStart="@+id/Special2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.2" />
+
+    </LinearLayout>
+
+</RelativeLayout>

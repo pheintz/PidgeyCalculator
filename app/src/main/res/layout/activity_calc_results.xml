@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PidgeyCalculator">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+
+            <EditText
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLines="1"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/NumPidgeys"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/eggXP" />
+
+            <EditText
+                android:layout_width="204dp"
+                android:digits="0123456789"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/NumCandies"
+                android:textColor="#000000"
+                android:completionThreshold="1"
+                android:layout_below="@+id/NumPidgeys"
+                android:layout_alignParentStart="true"
+                android:inputType="number" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/CalcPidgeys"
+                android:layout_alignBottom="@+id/NumCandies"
+                android:layout_toEndOf="@+id/NumCandies"
+                android:text="Calculate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="You Can Evolve"
+                android:id="@+id/YouCanEvolve"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_below="@+id/CalcPidgeys"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EvolvedPidgeys"
+                android:textSize="80dp"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_below="@+id/YouCanEvolve"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pidgeys"
+                android:id="@+id/textView4"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_below="@+id/EvolvedPidgeys"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Spent: "
+                android:id="@+id/TimeSpent"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/eggXP"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" XP Gained: "
+                android:id="@+id/GainedXP"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" XP Gained With Egg: "
+                android:id="@+id/eggXP"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/GainedXP"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/UseCandy"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:layout_above="@+id/GainedXP"
+                android:layout_alignEnd="@+id/TimeSpent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pidgeys you need to catch for 30 minutes of evolution time: "
+                android:id="@+id/PNeeded30"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:layout_below="@+id/TimeSpent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

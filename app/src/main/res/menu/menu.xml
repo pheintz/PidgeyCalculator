@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/PCalcMenu"
+        android:visible="true"
+        android:icon="@drawable/birdsil"
+        android:title="menu"
+        app:showAsAction="always">
+    </item>
+
+    <item android:id="@+id/EvoMenu"
+        android:visible="true"
+        android:title="EVO"
+        app:showAsAction="always">
+    </item>
+    <item android:id="@+id/PDexMenu"
+        android:visible="true"
+        android:title="P.Dex"
+        app:showAsAction="always">
+    </item>
+</menu>

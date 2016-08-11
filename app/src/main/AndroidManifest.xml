@@ -21,11 +21,10 @@
             android:name=".PidgeyCalculator"
             android:screenOrientation="portrait" />
         <activity android:name=".PokemonListView" />
-        <activity android:name=".DisplayPokemonInfo" />
         <activity android:name=".PokemonDetails" />
-        <activity android:name=".PidgeyCalculatorOld" />
         <activity android:name=".EvIVCalc" />
         <activity android:name=".EvolutionCalc"></activity>
+        <activity android:name=".PokemonDetailsWithFragments"></activity>
     </application>
 
 </manifest>

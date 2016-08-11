@@ -98,7 +98,7 @@ public class PidgeyCalculator extends AppCompatActivity {
                         t.setText(Html.fromHtml("Catch <b>" + String.valueOf(leftoverCandy) +
                          "</b> more pidgeys to use your remaining candy for <b>" +
                          String.valueOf(leftoverCandy + evolved) + "</b> total evolutions in <b> " +
-                         String.valueOf((int) (leftoverCandy + evolved) / 2) + "</b> minutes"));
+                         String.valueOf((leftoverCandy + evolved) / 2) + "</b> minutes"));
                     }
 
                     // calculation results displayed

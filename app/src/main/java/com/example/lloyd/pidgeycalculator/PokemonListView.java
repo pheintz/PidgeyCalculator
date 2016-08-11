@@ -71,7 +71,7 @@ public class PokemonListView extends AppCompatActivity implements SearchView.OnQ
                 String itemValue = (String) pListView.getItemAtPosition(position);
 
                 //In order to start displaying new activity we need an intent
-                Intent intent = new Intent(getApplicationContext(), PokemonDetails.class);
+                Intent intent = new Intent(getApplicationContext(), PokemonDetailsWithFragments.class);
 
                 //Putting the Id of image as an extra in intent
                 intent.putExtra("pokemonName", itemValue);

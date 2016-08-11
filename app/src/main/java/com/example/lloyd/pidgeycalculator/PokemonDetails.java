@@ -28,7 +28,6 @@ public class PokemonDetails extends AppCompatActivity{
 
     PokemonData pokeDex;
     MoveStats moveStats;
-    AttackMove tempAttack;
 
     List<AttackMove> pokemonAttacks;
     List<Pokemon> pokemonList;
@@ -77,10 +76,7 @@ public class PokemonDetails extends AppCompatActivity{
         gestureDetector = new GestureDetector(new MyGestureDetector());
         gestureListener = new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
-                if (gestureDetector.onTouchEvent(event)) {
-                    return true;
-                }
-                return false;
+                return gestureDetector.onTouchEvent(event);
             }
         };
 
@@ -306,10 +302,7 @@ public class PokemonDetails extends AppCompatActivity{
     }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (gestureDetector.onTouchEvent(event))
-            return true;
-        else
-            return false;
+        return gestureDetector.onTouchEvent(event);
     }
 
 }

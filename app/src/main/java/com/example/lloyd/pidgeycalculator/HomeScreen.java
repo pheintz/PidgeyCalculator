@@ -54,10 +54,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             Intent myIntent = new Intent(this, EvolutionCalc.class);
             HomeScreen.this.startActivity(myIntent);
         }
-        else if(view.getId() == R.id.PCalcMenu){
-            Intent myIntent = new Intent(this, EvolutionCalc.class);
-            HomeScreen.this.startActivity(myIntent);
-        }
     }
 
     @Override

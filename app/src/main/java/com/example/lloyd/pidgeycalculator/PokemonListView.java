@@ -54,7 +54,7 @@ public class PokemonListView extends AppCompatActivity implements SearchView.OnQ
         }
         pListView = (ListView) findViewById(R.id.pList);
 
-        // Set Adapter for searchbar and listview */
+        /** Set Adapter for searchbar and listview */
         pAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pNames);
         pListView.setAdapter(pAdapter);
         pListView.setTextFilterEnabled(true);
@@ -115,6 +115,7 @@ public class PokemonListView extends AppCompatActivity implements SearchView.OnQ
         return super.onCreateOptionsMenu(menu);
     }
 
+    /** Send back to home screen android back button pressed */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {

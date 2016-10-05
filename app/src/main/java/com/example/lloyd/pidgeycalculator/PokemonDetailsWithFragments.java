@@ -72,6 +72,7 @@ public class PokemonDetailsWithFragments extends FragmentActivity{
         // Instantiate a ViewPager and a PagerAdapter.
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        //give the adapter multiple sets of 'pages' to provide a circular effect
         mPager.setAdapter(mPagerAdapter);
         mPager.setCurrentItem(focusPage+302);
 

@@ -29,9 +29,17 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
     List<Pokemon> pokemonList;
     PokemonData pokemonData;
     List<String> pNames;
+
+    /** Do calculations button */
     Button evoButton;
+
+    /** To autocomplete pokemon name search */
     AutoCompleteTextView evolverNames;
+
+    /** Show evloved values */
     TextView CPtext;
+
+    /** Stores the values of evolved pokemon */
     Pokemon evolvedTo;
 
     @Override
@@ -47,6 +55,7 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
         pokemonData = new PokemonData();
         CPtext = (TextView) findViewById(R.id.CurrentCP);
 
+        /** Populate list for autocomplete */
         pokemonList = pokemonData.getPokemonList();
         Pokemon p;
         Iterator<Pokemon> itr = pokemonList.iterator();
@@ -67,19 +76,15 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
         evoButton = (Button) findViewById(R.id.EvoCalcButton);
         evoButton.setOnClickListener(this);
 
-
-        //find pokemon entered
-        //find cp multiplier
-        //display results on same page int text field
     }
+
+    /** Handle keyboard always showing */
     public void onClick (View view){
         if (view.getId() == R.id.EvoCalcButton){
             hideKeyboard(this);
             String name = evolverNames.getEditableText().toString();
             Iterator<Pokemon> aItr = pokemonList.iterator();
             Pokemon tempP = aItr.next();
-
-
 
 
             while(!tempP.name.toLowerCase().equals(name.toLowerCase()) && aItr.hasNext()){
@@ -95,7 +100,7 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
                 return;
             }
 
-            //do calcs
+            /** Calculations based on standard deviation on a bell curve */
             double lowerBound = tempP.evoCPMultiplier - tempP.evoSD;
             double upperBound = tempP.evoCPMultiplier + tempP.evoSD;
 
@@ -113,6 +118,7 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
                 return;
             }
 
+            /** Else update textfields with new information */
             t = (TextView) findViewById(R.id.ResultCP);
             t.setText(Html.fromHtml("<b>" + Integer.toString(result) + "</b>"));
 
@@ -137,6 +143,8 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
             }
 
         }
+
+    /** to handle case where keyboard was showing on maximize or activity start */
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
         //Find the currently focused view, so we can grab the correct window token from it.
@@ -196,6 +204,8 @@ public class EvolutionCalc extends AppCompatActivity implements View.OnClickList
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    /** Handle case pokemon estimated over max CP */
     boolean checkIfMax(int result){
         if(result > Integer.parseInt(evolvedTo.maxCP)){
 

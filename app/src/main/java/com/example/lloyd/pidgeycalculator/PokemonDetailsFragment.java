@@ -1,35 +1,35 @@
 package com.example.lloyd.pidgeycalculator;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Class that stores pokedex data as a fragment for access by
+ * a screenslider pager adapter
+ */
+
 public class PokemonDetailsFragment extends Fragment {
 
+    /** Stores data for swipe right */
     Pokemon previousPokemon;
+
+    /** Store data for current page */
     Pokemon foundPokemon;
+
+    /** Datea for swipe left */
     Pokemon nextPokemon;
 
+    /** Holds all available pokemon data */
     PokemonData pokeDex;
+
+    /** Stats of current pokemon */
     MoveStats moveStats;
 
     List<AttackMove> pokemonAttacks;
@@ -61,6 +61,7 @@ public class PokemonDetailsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        /** Mod 151 so that the pages can 'loop' and appear to be infinite */
         mPageNumber = getArguments().getInt(ARG_PAGE) % 151;
 
         name = getActivity().getIntent().getExtras().getString("pokemonName");
@@ -86,7 +87,6 @@ public class PokemonDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater
                 .inflate(R.layout.activity_pokemon_details_fragment, container, false);
-
 
         setPokemonAttacks(rootView);
 

@@ -12,8 +12,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener{
-    int pidgeys;
-    int candies;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,10 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-
         //Buttons
         Button pokedexbutton = (Button) findViewById(R.id.PokedexButton);
         Button pidgeycalcbutton = (Button) findViewById(R.id.PidgeyCalcButton);
         Button evocalcbutton = (Button) findViewById(R.id.EvoCalcButton);
-
-
 
         //Listeners
         pokedexbutton.setOnClickListener(this);  //register a callback when view is clicked
@@ -38,8 +35,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
     }
 
+    /** onClick handlers for buttons set in onCreate */
     public void onClick (View view){
-
 
         if(view.getId() == R.id.PidgeyCalcButton)
         {
@@ -64,6 +61,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         return super.onCreateOptionsMenu(menu);
     }
 
+    /** Menubar button handlers */
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent myIntent;
         // Handle item selection

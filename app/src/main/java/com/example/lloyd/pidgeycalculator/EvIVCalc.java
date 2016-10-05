@@ -3,6 +3,8 @@ package com.example.lloyd.pidgeycalculator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+//todo EVIV Calc
+
 public class EvIVCalc extends AppCompatActivity {
 
     @Override

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/pgopidgey"
+        android:icon="@drawable/birdsil"
         android:label="PidgeyCalc+"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,7 +21,6 @@
             android:name=".PidgeyCalculator"
             android:screenOrientation="portrait" />
         <activity android:name=".PokemonListView" />
-        <activity android:name=".PokemonDetails" />
         <activity android:name=".EvIVCalc" />
         <activity android:name=".EvolutionCalc"></activity>
         <activity android:name=".PokemonDetailsWithFragments"></activity>
